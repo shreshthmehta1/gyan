@@ -8,13 +8,28 @@ function updateInventory(arr1, arr2) {
        }
     }
 //update item
-    arr2.forEach(el => {
-        // console.log(el[1],'x');
-if(el[1]!=arr1[0][1] ){
-    console.log(arr1[0][1],'XX',el[1]);
-}
-    });
-    // console.log(arr1.includes(arr2)) 
+let arrN = [];
+let arrO = [];
+
+arr2.forEach(e => {
+    // console.log(e[1],'X');
+    arrN.push(e[1]);    
+});
+
+arr1.forEach(e => {
+    // console.log(e[1],'X');
+    arrO.push(e[1]);    
+});
+
+arrN.forEach(e => {
+if(!arrO.includes(e)){
+let index = arrN.indexOf(e);
+console.log('Y',e, index);
+arr1.push(arr2[index])
+} 
+})
+
+// console.log(arrN,arrO);
     return arr1;
 }
 

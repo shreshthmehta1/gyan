@@ -28,6 +28,19 @@ console.log('Y',e, index);
 arr1.push(arr2[index])
 } 
 })
+// arr1.sort();
+// arr1.sort(function(a, b) {
+//     // console.log(a[1],b[1],'VV')
+//     if (a[1] > b[1]) {
+//       return 1;
+//     }
+//     if (a[1] < b[1]) {
+//       return -1;
+//     }
+//     return 0;
+//   });
+
+arr1.sort((prev,next)=>(prev[1]>next[1]?1:-1))
 
 // console.log(arrN,arrO);
     return arr1;
